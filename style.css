@@ -12,7 +12,9 @@
 
 /* Global Layout Rules */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-body { background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden; position: relative; line-height: 1.5; }
+html, body { width: 100%; overflow-x: hidden; } /* Added width constraint */
+body { background-color: var(--bg-base); color: var(--text-main); position: relative; line-height: 1.5; }
+img, svg, video { max-width: 100%; height: auto; } /* Added to prevent media overflow */
 span { color: var(--accent); }
 .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; }
 .section-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--accent); margin-bottom: 1rem; }
@@ -140,7 +142,7 @@ nav a:hover { color: var(--text-main); }
     justify-content: center; 
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); 
     border: 1px solid transparent; 
-    flex-shrink: 0; /* Stops flexbox squishing */
+    flex-shrink: 0; 
 }
 
 /* Anti-Distortion SVG Vector Engine Rules */
@@ -150,7 +152,7 @@ nav a:hover { color: var(--text-main); }
     max-width: 36px;
     max-height: 36px;
     display: block; 
-    flex-shrink: 0; /* Restricts vector geometry path to a perfect square aspect */
+    flex-shrink: 0; 
 }
 
 /* Individual Brand Custom Accents */
@@ -182,4 +184,13 @@ footer { padding: 3.5rem 8%; border-top: 1px solid var(--border-subtle); backgro
     .massive-icon-matrix { grid-template-columns: repeat(2, 1fr); gap: 3rem 1.5rem; }
     .contact-card { padding: 4rem 1.5rem; }
     .contact-section h2 { font-size: 2rem; }
+    
+    /* Added these specific mobile fixes to stop horizontal layout breaking */
+    header { flex-direction: column; gap: 1rem; position: relative; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    nav a { margin-left: 0; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .hero-actions a { text-align: center; }
+    .filter-tabs { flex-wrap: wrap; }
+    .portfolio-grid { grid-template-columns: 1fr; }
 }
