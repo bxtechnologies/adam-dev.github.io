@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Abulkhayr — Front-End Developer</title>
+    <title>Adam Abulkhayr — Front-End Developer & UI Engineer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,7 @@
 
     <div class="bg-glow glow-1"></div>
     <div class="bg-glow glow-2"></div>
+    <div class="grid-overlay"></div>
 
     <header>
         <div class="logo">A<span>.</span>ABULKHAYR</div>
@@ -27,8 +28,8 @@
     <section class="hero">
         <div class="hero-container">
             <h2 class="subtitle-tag">Available for Full Website Builds & Urgent Front-End Commissions</h2>
-            <h1>Custom websites built from scratch.</h1>
-            <p class="hero-lead">Hi, I'm Adam. I specialize in launching complete, high-performance websites and engineering flawless user interfaces.</p>
+            <h1>Custom websites built from scratch<span class="serif-italic">. Fast delivery. Optimized for mobile viewports.</span><span>.</span></h1>
+            <p class="hero-lead">Hi, I'm Adam. I specialize in launching complete, high-performance websites, converting static designs into pixel-perfect code, and engineering flawless user interfaces.</p>
             <div class="hero-actions">
                 <a href="#work" class="btn-primary">View My Work</a>
                 <a href="#contact" class="btn-secondary">Start Your Project Today</a>
@@ -38,38 +39,145 @@
 
     <section id="work" class="work-section">
         <div class="section-header">
-            <p class="section-tag">01 / CAPABILITIES</p>
-            <h2>Front-End Code Showcases</h2>
+            <div>
+                <p class="section-tag">01 / CAPABILITIES</p>
+                <h2>Front-End Code Showcases</h2>
+            </div>
             <div class="filter-tabs">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="responsive">Responsive</button>
+                <button class="filter-btn active" data-filter="all">All Front-End</button>
+                <button class="filter-btn" data-filter="responsive">Responsive Pages</button>
+                <button class="filter-btn" data-filter="figma">Figma to Code</button>
+                <button class="filter-btn" data-filter="bugs">Layout Bug Fixes</button>
             </div>
         </div>
 
         <div class="portfolio-grid">
-            <div class="project-card" onclick="window.location.href='demos.html#demo1'">
-                <div class="card-media"></div>
+            <div class="project-card" data-category="responsive" onclick="window.location.href='demos.html#demo1'" style="cursor: pointer;">
+                <div class="card-media preview-responsive">
+                    <div class="mock-ui-phone-preview">
+                        <div class="mini-veloce-hero">
+                            <div class="mini-logo">VELOCE</div>
+                            <div class="mini-title">Architecture for the Body</div>
+                            <div class="mini-img-stripe"></div>
+                        </div>
+                    </div>
+                    <div class="media-overlay"><span>Launch Live Demo</span></div>
+                </div>
                 <div class="card-body">
+                    <span class="card-tag">RESPONSIVE DESIGN MODULE</span>
                     <h3>High-Conversion Landing Page</h3>
-                    <p>Clean, adaptive grid mechanics that work perfectly on every mobile screen size.</p>
+                    <p>A beautifully structured, fast-loading sales page coded cleanly with adaptive grid mechanics that work perfectly on every mobile screen size.</p>
                 </div>
             </div>
-            <div class="project-card" onclick="window.location.href='demos.html#demo2'">
-                <div class="card-media"></div>
+            
+            <div class="project-card" data-category="figma" onclick="window.location.href='demos.html#demo2'" style="cursor: pointer;">
+                <div class="card-media preview-figma">
+                    <div class="mock-ui-canvas-preview">
+                        <div class="mini-dashboard-widget">
+                            <div class="mini-w-title">COMPUTE VOLUME</div>
+                            <div class="mini-w-value">94.2 TB</div>
+                            <div class="mini-w-graph">
+                                <span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-overlay"><span>Launch Live Demo</span></div>
+                </div>
                 <div class="card-body">
+                    <span class="card-tag">PIXEL-PERFECT TRANSLATION</span>
                     <h3>Figma-to-Code Framework</h3>
-                    <p>Direct translation of visual designs into highly semantic, clean HTML/CSS architecture.</p>
+                    <p>Direct translation of a complex visual design file into highly semantic, clean HTML/CSS architecture that retains 100% layout accuracy.</p>
                 </div>
             </div>
-            <div class="project-card" onclick="window.location.href='demos.html#demo3'">
-                <div class="card-media"></div>
+            
+            <div class="project-card" data-category="bugs" onclick="window.location.href='demos.html#demo3'" style="cursor: pointer;">
+                <div class="card-media preview-bugs">
+                    <div class="mock-ui-split-preview">
+                        <div class="mini-pane-broken"><span>Error</span></div>
+                        <div class="mini-pane-fixed"><span>Fixed ✓</span></div>
+                    </div>
+                    <div class="media-overlay"><span>Launch Live Demo</span></div>
+                </div>
                 <div class="card-body">
+                    <span class="card-tag">UI BUG PATCHING</span>
                     <h3>E-Commerce Interface Cleanups</h3>
-                    <p>Audited layouts and re-wrote parameters to fix broken mobile navigation.</p>
+                    <p>Audited an existing design layout and re-wrote modern layout parameters to fix broken drop-downs, overlapping mobile images, and navigation menus.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <p class="section-tag">02 / CORE SERVICES</p>
+            <h2>I build clean, lightning-fast web architectures from scratch or optimize your existing digital platforms.</h2>
+            <div class="services-grid">
+                <div class="services-col">
+                    <div class="service-icon-wrapper">🌐</div>
+                    <h3>Full Website Development</h3>
+                    <p>From a blank page to a fully live, responsive web presence. I write highly structured, production-ready HTML and CSS to bring your entire brand online with fast loading speeds and flawless multi-screen layouts.</p>
+                </div>
+                <div class="services-col">
+                    <div class="service-icon-wrapper">📱</div>
+                    <h3>Figma to Code & Bug Fixing</h3>
+                    <p>Have a static design ready to go, or an existing layout that cuts off buttons on mobile phones? I translate UI mockups into clean markup and manually dive into codebases to isolate and patch interface errors fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-card">
+            <p class="section-tag">03 / INITIATE TASK</p>
+            <h2>Ready to bring your front-end layout to life?</h2>
+            <p class="contact-lead">Need an interface design translated or broken CSS layouts patched? Click directly on any platform below to establish an instant link with me.</p>
+            
+            <div class="massive-icon-matrix">
+                <a href="mailto:iamadamabulkhayr@gmail.com" class="matrix-link-target" title="Send Email" target="_blank" rel="noopener">
+                    <div class="giant-brand-icon icon-gmail">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </div>
+                    <span class="matrix-label">Email Dispatch</span>
+                </a>
+
+                <a href="https://wa.me/2349077966090" class="matrix-link-target" title="Chat on WhatsApp" target="_blank" rel="noopener">
+                    <div class="giant-brand-icon icon-whatsapp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                            <path d="M12.004 2c-5.518 0-9.996 4.477-9.996 9.995 0 1.763.458 3.42 1.257 4.876L2 22l5.28-1.385c1.4.764 2.996 1.186 4.724 1.186 5.518 0 9.996-4.477 9.996-9.995C22 6.477 17.522 2 12.004 2zm5.83 14.238c-.24.675-1.187 1.226-1.637 1.272-.44.046-.874.223-2.812-.534-2.48-.968-4.085-3.486-4.207-3.65-.122-.164-1.026-1.365-1.026-2.604 0-1.24.653-1.85.886-2.102.233-.252.512-.315.683-.315.17 0 .342.002.49.01.15.007.35-.057.548.42.204.493.698 1.7.759 1.823.06.124.1.267.018.432-.082.165-.123.268-.246.412-.122.144-.258.32-.367.43-.122.12-.25.25-.107.496.143.245.635 1.047 1.36 1.693.935.83 1.722 1.086 1.967 1.208.245.122.39.103.534-.06.144-.165.613-.712.776-.957.164-.244.327-.205.55-.123.224.083 1.423.67 1.669.793.246.123.408.185.47.29.06.106.06.61-.18 1.285z"/>
+                        </svg>
+                    </div>
+                    <span class="matrix-label">WhatsApp</span>
+                </a>
+
+                <a href="https://t.me/adamabulkahyr" class="matrix-link-target" title="Open Telegram Channel" target="_blank" rel="noopener">
+                    <div class="giant-brand-icon icon-telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .33z"/>
+                        </svg>
+                    </div>
+                    <span class="matrix-label">Telegram</span>
+                </a>
+
+                <a href="#" class="matrix-link-target" title="Copy Discord Username" onclick="navigator.clipboard.writeText('adamabulkahyr'); alert('Discord handle copied to clipboard!'); return false;">
+                    <div class="giant-brand-icon icon-discord">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                            <path d="M19.27 4.73a16.1 16.1 0 00-3.97-1.23.05.05 0 00-.05.02c-.17.3-.37.63-.5.78a14.85 14.85 0 00-4.5 0c-.13-.15-.33-.48-.5-.78a.05.05 0 00-.05-.02 16.1 16.1 0 00-3.97 1.23.05.05 0 00-.02.02C2.18 9.79 1.48 14.71 1.83 19.54a.05.05 0 00.02.04 16.18 16.18 0 004.9 2.48.05.05 0 00.06-.02c.38-.52.72-1.07 1-1.65a.05.05 0 00-.03-.07 10.57 10.57 0 01-1.54-.73.05.05 0 010-.09c.1-.07.2-.15.3-.23a.05.05 0 01.05 0 11.53 11.53 0 009.96 0 .05.05 0 01.05 0c.1.08.2.16.3.23a.05.05 0 010 .09 10.51 10.51 0 01-1.54.73.05.05 0 00-.03.07c.29.58.63 1.13 1 1.65a.05.05 0 00.06.02 16.18 16.18 0 004.9-2.48.05.05 0 00.02-.04c.4-5.34-.66-10.22-3.1-14.79a.05.05 0 00-.02-.02zM8.52 14.91c-.95 0-1.74-.88-1.74-1.95s.76-1.95 1.74-1.95c.99 0 1.76.88 1.74 1.95 0 1.07-.75 1.95-1.74 1.95zm6.96 0c-.95 0-1.74-.88-1.74-1.95s.76-1.95 1.74-1.95c.99 0 1.76.88 1.74 1.95 0 1.07-.75 1.95-1.74 1.95z"/>
+                        </svg>
+                    </div>
+                    <span class="matrix-label">Discord</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-wrap">
+            <p class="copyright">&copy; 2026 Adam Abulkhayr. All Front-End Execution Rights Reserved.</p>
+            <p class="footer-tech">Engineered via HTML5 • CSS3 • Clean ES6 JavaScript</p>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>
