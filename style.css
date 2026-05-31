@@ -1,22 +1,71 @@
-/* Base Styles (Mobile First) */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+/* --- BASE SETUP --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #0a0a0a; 
+    color: #e0e0e0; 
     line-height: 1.6;
+    overflow-x: hidden; 
 }
 
-.container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column; /* Stacks items vertically on mobile */
-    gap: 20px;
+/* --- HEADER --- */
+header { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 2rem; 
+    gap: 1rem; 
+}
+nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+
+/* --- HERO --- */
+.hero { padding: 4rem 1rem; text-align: center; }
+.hero h1 { font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 1rem; }
+.hero-lead { max-width: 600px; margin: 0 auto 2rem; }
+
+/* --- PORTFOLIO GRID (Responsive Fix) --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Tablet and Desktop Styles */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row; /* Switches to side-by-side on larger screens */
-        justify-content: center;
-    }
+.project-card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
 }
+
+.card-media { 
+    width: 100%; 
+    height: 200px; 
+    background: #222; 
+    margin-bottom: 1rem; 
+    border-radius: 8px; 
+}
+
+/* --- MEDIA QUERIES --- */
+@media (min-width: 600px) {
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+    header { flex-direction: row; justify-content: space-between; padding: 2rem 5rem; }
+}
+
+/* --- UTILITY --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+.btn-primary { background: #fff; color: #000; font-weight: 700; }
+.btn-secondary { border: 1px solid #fff; color: #fff; }
