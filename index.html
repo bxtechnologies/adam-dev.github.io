@@ -2,23 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- This meta tag is the magic fix for mobile! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Abulkhayr | Web Developer</title>
+    <title>Adam Abulkhayr — Front-End Developer</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
     <header>
-        <h1>Adam Abulkhayr</h1>
-        <p>Frontend Developer</p>
+        <div class="logo">A<span>.</span>ABULKHAYR</div>
+        <nav>
+            <a href="#work">Code Portfolio</a>
+            <a href="#services">My Services</a>
+            <a href="#contact" class="nav-cta">Hire Me Now</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="container">
-            <h2>My Work</h2>
-            <!-- Your project cards go here -->
-        </section>
-    </main>
+    <section class="hero">
+        <div class="hero-container">
+            <h2 class="subtitle-tag">Available for Full Website Builds & Urgent Front-End Commissions</h2>
+            <h1>Custom websites built from scratch.</h1>
+            <p class="hero-lead">Hi, I'm Adam. I specialize in launching complete, high-performance websites and engineering flawless user interfaces.</p>
+            <div class="hero-actions">
+                <a href="#work" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Start Your Project Today</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <div class="section-header">
+            <p class="section-tag">01 / CAPABILITIES</p>
+            <h2>Front-End Code Showcases</h2>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="responsive">Responsive</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="project-card" onclick="window.location.href='demos.html#demo1'">
+                <div class="card-media"></div>
+                <div class="card-body">
+                    <h3>High-Conversion Landing Page</h3>
+                    <p>Clean, adaptive grid mechanics that work perfectly on every mobile screen size.</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="window.location.href='demos.html#demo2'">
+                <div class="card-media"></div>
+                <div class="card-body">
+                    <h3>Figma-to-Code Framework</h3>
+                    <p>Direct translation of visual designs into highly semantic, clean HTML/CSS architecture.</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="window.location.href='demos.html#demo3'">
+                <div class="card-media"></div>
+                <div class="card-body">
+                    <h3>E-Commerce Interface Cleanups</h3>
+                    <p>Audited layouts and re-wrote parameters to fix broken mobile navigation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="main.js"></script>
 </body>
