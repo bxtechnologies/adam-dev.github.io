@@ -68,7 +68,7 @@ nav a:hover { color: var(--text-main); }
 .card-body h3 { font-size: 1.35rem; margin-bottom: 0.75rem; font-weight: 600; letter-spacing: -0.5px; }
 .card-body p { color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; font-weight: 300; }
 
-/* Mini Previews Metering Live Demo Workspace Frameworks */
+/* Mini Previews */
 .preview-responsive { background: linear-gradient(135deg, #111116 0%, #1c1a24 100%); }
 .mock-ui-phone-preview { width: 150px; height: 180px; background: #fafafa; border-radius: 8px 8px 0 0; padding: 12px; border: 1px solid rgba(255,255,255,0.1); transform: translateY(20px); transition: var(--transition-smooth); }
 .project-card:hover .mock-ui-phone-preview { transform: translateY(10px) scale(1.03); }
@@ -103,83 +103,47 @@ nav a:hover { color: var(--text-main); }
 .services-col h3 { font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600; }
 .services-col p { color: var(--text-muted); line-height: 1.7; font-size: 1rem; font-weight: 300; }
 
-/* Communications Matrix Styles - Anti-Distortion Framework */
+/* Communications Matrix */
 .contact-section { padding: 8rem 8%; display: flex; justify-content: center; }
 .contact-card { background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 5rem 4rem; max-width: 1050px; width: 100%; text-align: center; }
 .contact-section h2 { font-size: 2.6rem; letter-spacing: -1px; margin-bottom: 1.2rem; font-weight: 700; }
 .contact-lead { color: var(--text-muted); margin-bottom: 5rem; font-weight: 300; max-width: 650px; margin-left: auto; margin-right: auto; font-size: 1.05rem; line-height: 1.6; }
 
-.massive-icon-matrix { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 2rem; 
-    justify-items: center; 
-    align-items: center; 
-    margin-top: 2rem; 
-}
-
-.matrix-link-target { 
-    text-decoration: none; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    gap: 1.2rem; 
-    cursor: pointer; 
-    width: 100%; 
-    max-width: 160px; 
-    transition: var(--transition-smooth); 
-}
-
-/* Perfect Circle Containers (Explicitly Sized & Rigid) */
-.giant-brand-icon { 
-    width: 90px; 
-    height: 90px; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); 
-    border: 1px solid transparent; 
-    flex-shrink: 0; /* Stops flexbox squishing */
-}
-
-/* Anti-Distortion SVG Vector Engine Rules */
-.giant-brand-icon svg { 
-    width: 36px; 
-    height: 36px; 
-    max-width: 36px;
-    max-height: 36px;
-    display: block; 
-    flex-shrink: 0; /* Restricts vector geometry path to a perfect square aspect */
-}
-
-/* Individual Brand Custom Accents */
+.massive-icon-matrix { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; justify-items: center; align-items: center; margin-top: 2rem; }
+.matrix-link-target { text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; cursor: pointer; width: 100%; max-width: 160px; transition: var(--transition-smooth); }
+.giant-brand-icon { width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); border: 1px solid transparent; flex-shrink: 0; }
+.giant-brand-icon svg { width: 36px; height: 36px; max-width: 36px; max-height: 36px; display: block; flex-shrink: 0; }
 .icon-gmail { background: rgba(234, 67, 53, 0.05); color: #ea4335; border-color: rgba(234, 67, 53, 0.1); }
 .icon-whatsapp { background: rgba(37, 211, 102, 0.05); color: #25d366; border-color: rgba(37, 211, 102, 0.1); }
 .icon-telegram { background: rgba(0, 136, 204, 0.05); color: #0088cc; border-color: rgba(0, 136, 204, 0.1); }
 .icon-discord { background: rgba(88, 101, 242, 0.05); color: #5865f2; border-color: rgba(88, 101, 242, 0.1); }
-
 .matrix-label { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); letter-spacing: -0.2px; transition: var(--transition-smooth); }
-
-/* Interaction States */
 .matrix-link-target:hover .giant-brand-icon { transform: translateY(-6px); border-color: currentColor; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); }
 .matrix-link-target:hover .matrix-label { color: var(--text-main); }
 
-/* Footer Elements */
+/* Footer */
 footer { padding: 3.5rem 8%; border-top: 1px solid var(--border-subtle); background: #04060d; }
 .footer-wrap { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.85rem; }
 
-/* Responsive Media Engine Adjustments */
+/* Responsive Media Engine */
+@media (max-width: 1050px) {
+    .services-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
 @media (max-width: 960px) {
     .hero h1 { font-size: 3rem; }
     .section-header { flex-direction: column; align-items: flex-start; gap: 2rem; }
-    .services-grid { grid-template-columns: 1fr; gap: 3.5rem; }
     header { padding: 2rem 5%; }
     .hero, .work-section, .services-section, .contact-section { padding-left: 5%; padding-right: 5%; }
 }
 
 @media (max-width: 768px) {
+    header { position: relative; flex-direction: column; gap: 20px; }
+    nav { margin-top: 10px; }
+    .hero { min-height: auto; padding-top: 8rem; padding-bottom: 4rem; }
+    .portfolio-grid { grid-template-columns: 1fr; }
     .massive-icon-matrix { grid-template-columns: repeat(2, 1fr); gap: 3rem 1.5rem; }
-    .contact-card { padding: 4rem 1.5rem; }
+    .contact-card { padding: 3rem 1.5rem; }
     .contact-section h2 { font-size: 2rem; }
+    .footer-wrap { flex-direction: column; text-align: center; gap: 10px; }
 }
